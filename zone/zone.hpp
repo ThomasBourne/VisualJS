@@ -235,7 +235,7 @@ public:
 			}
 
 			//move cursor down
-			if (evnt.key.code == sf::Keyboard::Down && this->cursorPos < this->text.size()) {
+			if (evnt.key.code == sf::Keyboard::Down && this->cursorPos < this->text.size()-1) {
 				this->cursorElement.setPosition(this->text[this->cursorPos+1].getPosition());
 				this->cursorElement.setSize(sf::Vector2f(this->cursorElement.getSize().x, this->text[this->cursorPos + 1].getGlobalBounds().height));
 				this->cursorPos++;
